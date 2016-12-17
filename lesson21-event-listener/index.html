@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Event Listener</title>
+</head>
+<body>
+  <input type="text" value="qwe" id="txt">
+  <select id="lua-chon">
+    <option value="">one</option>
+    <option value="">two</option>
+    <option value="">three</option>
+  </select>
+
+  <div id="mydiv">
+    <p id="mypara">Click here</p>
+  </div>
+
+  <script type="text/javascript">
+    function keyDown() {
+      alert('ok');
+    }
+
+    function keyDown2() {
+      console.log('key down 2');
+    }
+
+    function hoverMe() {
+      console.log('hovered');
+    }
+
+    document.getElementById('txt').addEventListener('keydown', keyDown);
+    document.getElementById('txt').addEventListener('keydown', keyDown2);
+    document.getElementById('txt').addEventListener('mouseover', hoverMe);
+
+    document.getElementById('lua-chon').addEventListener('change', function(){
+      alert('changed');
+    });
+
+    document.getElementById("mydiv").addEventListener('click', function(){
+      alert('cliked div');
+    }, true);
+
+    document.getElementById("mypara").addEventListener('click', function(){
+      alert('cliked p');
+    }, true);
+
+
+    // document.getElementById('txt').removeEventListener('keydown', keyDown);
+  </script>
+</body>
+</html>

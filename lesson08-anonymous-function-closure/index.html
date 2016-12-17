@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Anonymous Function and Closure</title>
+</head>
+<body>
+  <script type="text/javascript">
+    // anonymous function
+    var a = function(name) {
+      console.log("Hello world "+name);
+    };
+    a("bibi");
+
+    // closure function
+    var b = function() {
+      // environment variable
+      var m = 100;
+      return function() {
+        m += 100;
+        console.log(m);
+      }
+    }
+
+    // global variable
+    // console.log(m);
+
+    var c = b();
+    c(); // 200
+    c(); // 300
+
+    // note: anonymous function duoc goi la closure khi no su dung cac bien moi truong xung quanh no
+    // luu y su khac nhau giua global variable va environment variable
+
+    function normal(name, age) {
+      // default parameter
+      // name = name || "kiki";
+      // age = age || 10;
+      return name + age;
+    }
+    console.log(normal(false, 20)); // 20
+    console.log(normal(null, 20)); // 20
+    console.log(normal(undefined, 20)); // NaN
+    console.log(normal("milu", 20)); // milu20
+    console.log(normal()); // kiki10 if use default param, NaN if not
+  </script>
+</body>
+</html>

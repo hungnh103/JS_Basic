@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Data Type</title>
+</head>
+<body>
+  <script>
+    var str = "string";
+    var num = 1234;
+    var array = ['hello', 'world'];
+    var object = {
+      car: 'honda',
+      motor: 'suzuki',
+      child: {
+        color: 'blue'
+      }
+    };
+    var bool = true;
+    var fn = function() { // anonymous function, or closure
+      console.log("fn");
+    };
+
+    console.log(str);
+    console.log(num);
+    console.log(array);
+    console.log(object);
+    console.log(bool);
+    // fn();
+    console.log(fn);
+    console.log(array[1]);
+    console.log(object.car);
+    console.log(object.child.color);
+    var a;
+    console.log(a);
+    a = null;
+    console.log(a);
+  </script>
+</body>
+</html>

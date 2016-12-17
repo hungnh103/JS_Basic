@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Other techniques</title>
+</head>
+<body>
+  <script type="text/javascript">
+    // ---self-invoked function
+    (function(a, b, c) {
+      console.log("hi");
+      console.log(a);
+      console.log(b);
+      console.log(c);
+    })('one', 'two', 3);
+
+
+    // ---compare variables
+    // var a = 123;
+    // var b = "qwe";
+
+    var a = {
+      first: 'one',
+      second: 'two'
+    };
+    var b = {
+      first: 'one',
+      second: 'two'
+    };
+
+    if (a == b) {
+      console.log(true);
+    } else {
+      console.log(false);
+    }
+
+    // ---callback
+    function callBack(fn) {
+      if (typeof(fn) === 'function') {
+        fn(window.location);
+      } else {
+        console.log(fn);
+      }
+    }
+
+    callBack(function(result) {
+      console.log(result.href);
+      console.log(result.pathname);
+    });
+
+    callBack('aaa');
+  </script>
+</body>
+</html>

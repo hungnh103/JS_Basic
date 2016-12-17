@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Debug Technique 3 - try catch</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var a = 90;
+    try {
+      if (a>100) {
+        throw {code: 101, mess: 'too big'};
+      } else if (a<50) {
+        throw {code: 201, mess: 'too small'};
+      }
+      console.log('exec');
+    } catch(err) {
+      console.log(err);
+      alert('Error '+err.code+': '+err.mess);
+    } finally { // luc nao cung duoc thuc hien, du co loi hay khong
+      alert('executed');
+    }
+  </script>
+</body>
+</html>

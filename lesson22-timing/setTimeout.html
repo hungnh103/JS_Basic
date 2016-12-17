@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>setTimeout</title>
+</head>
+<body>
+  <input type="text" id="txt">
+  <script type="text/javascript">
+    var oldTimeout = '';
+    document.getElementById('txt').addEventListener('keyup', function(){
+      clearTimeout(oldTimeout);
+      oldTimeout = setTimeout(function() {
+        alert('send data');
+      }, 2000);
+    })
+    // setTimeout(function() {
+    //   alert('hi');
+    // }, 2000);
+  </script>
+</body>
+</html>

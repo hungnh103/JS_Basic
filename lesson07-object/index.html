@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Object in JS</title>
+</head>
+<body>
+  <script>
+    var car = {
+      name: "innova",
+      color: "white",
+      type: {
+        height: 200,
+        weight: 300
+      },
+      getCar: function() {
+        return "name: " +this.name+", color: "+this.color;
+      }
+    };
+    console.log(car);
+    console.log(car.getCar());
+
+    // contructor
+    function createCar(name, color, type, callback) {
+      this.name = name;
+      this.color = color;
+      this.type = type;
+      this.getCar = callback;
+    }
+
+    var car1 = new createCar('ferrari', 'red', {height: 300, weight: 50, width: 70}, function() {
+      return "name: " +this.name+", color: "+this.color;
+    });
+
+    console.log(car1);
+
+    // xoa bo phan tu khoi object
+    // delete car1.type;
+    console.log(car1);
+
+    // car[1] = 'hi';
+    // car['speed'] = 270;
+    // car.price = 10000;
+
+    // var obj = new Object();
+    // obj.name = "honda";
+    // obj.color = "black";
+
+    // var car2 = car;
+    // car2.price = 20;
+    // console.log(car2);
+
+    // console.log(car);
+    // console.log(car.name);
+    // console.log(car.type.weight);
+    // console.log(car[1]);
+
+    // console.log(obj);
+    // console.log(obj.name);
+  </script>
+</body>
+</html>

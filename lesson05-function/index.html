@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Function in JS</title>
+</head>
+<body>
+  <script>
+    // fnName(10, "Hello");
+  </script>
+  <script>
+    fnName(10, "Hello");
+    function fnName(param1, param2) {
+      console.log(param1 + param2);
+    }
+
+    function add(a, b) {
+      return a + b;
+    }
+
+    function subtract(a, b) {
+      return a - b;
+    }
+
+    function multiply(a, b) {
+      return a * b;
+    }
+
+    function divide(a, b) {
+      return a / b;
+    }
+
+    m = add;
+    console.log(add.toString());
+    console.log(m);
+  </script>
+</body>
+</html>

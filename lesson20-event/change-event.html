@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Change event in JS</title>
+  <script type="text/javascript">
+    // anonymous function
+    window.onload = function() {
+      loadMe();
+    }
+
+    function loadMe() {
+      console.log(document.getElementById('txt').value);
+    }
+  </script>
+</head>
+<body>
+
+  <input type="text" onkeydown="changeMe()" id='txt' value='asd'>
+
+  <select onchange="changeMe()">
+    <option value="">one</option>
+    <option value="">two</option>
+    <option value="">three</option>
+  </select>
+  <script type="text/javascript">
+  function changeMe() {
+  //   alert('changed');
+  }
+  </script>
+</body>
+</html>

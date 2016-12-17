@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Debug Technique 1 - check data type</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var a = 'abcd'; // string
+    var b = 1234; // number
+    var c = []; // object
+    var d = {}; // object
+    var e = function(){}; // function
+    var m = true; // boolean
+    var n = null; // object
+    var p = undefined; // undefined
+
+    console.log(typeof(a));
+    console.log(typeof(b));
+    console.log(typeof(c));
+    console.log(typeof(d));
+    console.log(typeof(e));
+    console.log(typeof(m));
+    console.log(typeof(n));
+    console.log(typeof(p));
+
+    // if (typeof(a) === 'string') {
+    //   window.alert('xau ky tu');
+    // }
+
+    function isArray(arr) {
+      return arr.constructor === Array; // true or false
+    }
+
+    console.log(c.constructor);
+    console.log(isArray(c)); // true
+
+    var obj = {
+      first: {
+        second: {
+          third: 'hi'
+        }
+      }
+    };
+
+    var test = obj && obj.first && obj.first && obj.first.second && obj.first.second.third;
+
+    // if (typeof(test) === "undefined") {
+    if (test) {
+      alert("has value");
+    }
+
+    // console.log(obj.first.second.third);
+    // console.log(obj.first.second);
+    // console.log(obj.first);
+    console.log(test);
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Regex</title>
+</head>
+<body>
+  <script type="text/javascript">
+     var a = 'Jack23 David98 Jason42';
+     // var regex = new RegExp('[a-z]', 'i');
+     var regex = /([a-z])+([0-9]*)/ig;
+     // var result = regex.test(a);
+     var result = regex.exec(a);
+     while (result != null) {
+       console.log(result[0]);
+       result = regex.exec(a);
+     }
+  </script>
+</body>
+</html>

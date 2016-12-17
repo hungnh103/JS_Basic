@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>DOM</title>
+</head>
+<body>
+  <div id="content">
+    This is ID content
+  </div>
+  <div class="content">
+    This is Class content
+  </div>
+  <div class="content">
+    This is Class content
+  </div>
+  <div class="content">
+    This is Class content
+  </div>
+
+  <script type="text/javascript">
+    // console.log(document.getElementById('content').outerHTML);
+    // console.log(document.getElementById('content'));
+    // console.log(document.getElementsByClassName('content'));
+    var contentClass = document.getElementsByClassName('content');
+    for (i=0; i<contentClass.length; i++ ) {
+      contentClass[i].innerHTML = "qwe";
+    }
+  </script>
+</body>
+</html>
